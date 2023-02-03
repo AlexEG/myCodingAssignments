@@ -1,0 +1,77 @@
+nav {
+  height: 100vh;
+  width: 72px;
+  padding-inline: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--channel-nav-bg);
+
+  ul {
+    // outline: solid 1px rgb(72, 255, 0); ////
+
+    li {
+      // outline: solid 1px red; ////
+      &:first-child {
+        margin-block: 20px;
+      }
+
+      width: 48px;
+      height: 48px;
+      list-style: none;
+      margin-bottom: 10px;
+      position: relative;
+
+      img {
+        border-radius: 50%;
+        transition: border-radius 200ms ease-in-out;
+
+        &:hover {
+          border-radius: 30%;
+        }
+      }
+
+      // add before + after to a tag (channel name) beside the logo
+      // general style for all
+      a {
+        position: relative;
+
+        .channel-name {
+          position: relative;
+          // position the name box at the right (left, top)
+          transform: translate(150%, -200%);
+
+          border-radius: 5px;
+          //? use visibility with hove instead of before and after
+          visibility: hidden;
+          //? you can also transition visibility
+          transition: opacity 200ms ease-in-out;
+          opacity: 0;
+
+          span {
+            padding: 10px;
+            background-color: var(--icons-content-sidebar);
+            color: white;
+            text-align: center;
+          }
+          // add a simple triangle to the left side of the box
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -15px;
+            border: solid 8px transparent;
+            border-right-color: var(--icons-content-sidebar);
+          }
+        }
+
+        &:hover .channel-name {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      // styling for each channel logo
+    }
+  }
+}
