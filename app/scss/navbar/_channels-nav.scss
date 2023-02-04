@@ -1,4 +1,17 @@
 nav {
+  //todo HTML architecture //
+  /*
+  <nav>
+    <ul>
+      <li>
+        <a>
+          <img>
+          <div class="channel-name"> <span> </span> </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  */
   height: 100vh;
   width: 72px;
   padding-inline: 12px;
@@ -11,7 +24,7 @@ nav {
     // outline: solid 1px rgb(72, 255, 0); ////
 
     li {
-      // outline: solid 1px red; ////
+      // outline: solid 1px blue; ////
       &:first-child {
         margin-block: 20px;
       }
@@ -24,7 +37,7 @@ nav {
 
       img {
         border-radius: 50%;
-        transition: border-radius 200ms ease-in-out;
+        transition: border-radius 180ms ease-in-out;
 
         &:hover {
           border-radius: 30%;
@@ -34,6 +47,8 @@ nav {
       // add before + after to a tag (channel name) beside the logo
       // general style for all
       a {
+        // outline: solid 1px red; ////
+
         position: relative;
 
         .channel-name {
@@ -41,7 +56,6 @@ nav {
           // position the name box at the right (left, top)
           transform: translate(150%, -200%);
 
-          border-radius: 5px;
           //? use visibility with hove instead of before and after
           visibility: hidden;
           //? you can also transition visibility
@@ -49,6 +63,7 @@ nav {
           opacity: 0;
 
           span {
+            border-radius: 5px;
             padding: 10px;
             background-color: var(--icons-content-sidebar);
             color: white;
@@ -71,7 +86,38 @@ nav {
           opacity: 1;
         }
       }
-      // styling for each channel logo
+      //  //////////////////////////////////////////////  //
+      //* channels logo hover state part2 (the left side white thing) *//
+      // --------------------------------- //
+      // there is three state
+      // 1.not active(not open) + not in hover state  [state1]
+      // 2.not active but (hover) only  [state2]
+      // 3.(active) but not hover  [state3]
+
+      // width is always 8px -4px left out
+      // (hover) height 19px
+      // (active) height 38px
+      // --------------------------------- //
+      //?? ↓↓ nav => ul => [li]
+      &::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        top: 50%;
+        left: -16px;
+        transform: translateY(-50%);
+        transition: height 180ms ease-in-out;
+      }
+
+      &:hover {
+        // outline: none; ////
+        &::after {
+          height: 18px;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ///////////////////// -->
+    <section class="assignment-code">
+      <div class="code-container html-container">
+        <textarea id="HTMLcode" readonly>
+      Add HTML Code Here
+    </textarea
+        >
+        <button id="HTMLButton">Copy Codes</button>
+      </div>
+
+      <div class="code-container css-container">
+        <textarea id="CSScode" readonly>
+    &::after {
+    
+    </textarea
+        >
+        <button id="CSSButton">Copy Codes</button>
+      </div>
+      <div class="code-container js-container">
+        <textarea id="JScode" readonly>
+      Add JavaScript Code here Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ut ab similique repudiandae dolores officia modi natus molestias quisquam corporis quaerat voluptas, deserunt perferendis facere, amet error exercitationem debitis ipsum est quae delectus sunt, autem labore. Atque dignissimos deleniti corporis officiis, animi distinctio, perspiciatis laborum eveniet tempore sunt nostrum laudantium maiores vero quis ullam nisi dolores sed dicta facilis blanditiis, numquam veritatis nihil. Ipsa odio maxime id optio nihil. Dolor magnam quaerat vel eaque dolorum eligendi dignissimos voluptatum quibusdam sapiente ullam minima itaque, quod natus reprehenderit veniam laudantium eius obcaecati. Temporibus eveniet corrupti ratione perspiciatis quisquam. Voluptatibus exercitationem ipsam similique maiores sint quidem minus. Molestiae, ratione? Voluptate molestias quaerat, temporibus consequuntur aspernatur esse iste autem adipisci tenetur alias nobis amet deleniti ipsam explicabo assumenda dolorem corporis id quis a, reiciendis possimus! Eligendi repudiandae praesentium, ut numquam facere distinctio. Accusantium exercitationem esse, vel dolor expedita nemo amet similique. Odio exercitationem voluptas minima ipsum quos quasi minus hic repellat fugiat vero assumenda, cumque laborum nobis consequuntur, eum aperiam blanditiis quaerat ad neque fuga labore? Sit asperiores voluptate voluptates. Quos asperiores sit obcaecati nihil, et soluta deleniti aliquam nulla mollitia facere ullam voluptas laboriosam quas expedita dolor, facilis inventore repellendus quod aperiam ut. Eos molestiae aliquam quibusdam? Autem pariatur nobis sunt, rerum corrupti tempore quis. Dolorum eligendi consequuntur pariatur quod. Deleniti, porro et blanditiis adipisci in atque explicabo id excepturi fugiat rerum quidem sunt facere obcaecati voluptatibus, eius consequatur! Voluptate itaque libero consectetur distinctio maxime aspernatur commodi sit eveniet saepe sequi, dolor qui aliquam explicabo quidem. Tenetur molestiae voluptate ut dolore minima ipsum quibusdam corporis voluptates tempora? Molestias esse necessitatibus error quasi! Voluptas mollitia quisquam blanditiis totam reprehenderit, fugit aliquam labore amet ratione nihil maiores ipsum culpa. Optio magni vero dolorum veniam cum totam expedita sed, doloremque cupiditate a fuga sapiente. Repellendus, doloribus.
+    </textarea
+        >
+        <button id="JSButton">Copy Codes</button>
+      </div>
+    </section>
+    <!-- ///////////////////// -->
+    <script>
+      // HTML  JS Code
+      let HTMLcode = document.getElementById("HTMLcode");
+      let HTMLButton = document.getElementById("HTMLButton");
+
+      HTMLButton.onclick = function () {
+        HTMLcode.select();
+        document.execCommand("copy");
+        HTMLButton.innerText = "Codes Copied";
+      };
+
+      // CSS Js Code
+      let CSScode = document.getElementById("CSScode");
+      let CSSButton = document.getElementById("CSSButton");
+
+      CSSButton.onclick = function () {
+        CSScode.select();
+        document.execCommand("copy");
+        CSSButton.innerText = "Codes Copied";
+      };
+      // JavaScript JS Code
+      let JScode = document.getElementById("JScode");
+      let JSButton = document.getElementById("JSButton");
+
+      JSButton.onclick = function () {
+        JScode.select();
+        document.execCommand("copy");
+        JSButton.innerText = "Codes Copied";
+      };
+    </script>
+  </body>
+</html>
