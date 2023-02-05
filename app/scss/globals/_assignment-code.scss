@@ -1,0 +1,106 @@
+.assignment-code {
+  //todo HTML architecture //
+  /*
+  
+  */
+  border: solid red 2px;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  //?? ↓↓ .assignment-code => [.code-container]
+  .code-container {
+    // border: solid red 2px; /////
+
+    position: relative;
+    height: 380px;
+    max-width: 660px;
+    width: 100%;
+    margin: 55px 0;
+
+    //?? ↓↓ .assignment-code => .code-container => button
+    button {
+      // position: absolute;
+      width: 130px;
+      height: 40px;
+      bottom: 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #1fd1f9;
+      background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+      &:hover {
+        color: #f0094a;
+        background: transparent;
+      }
+    }
+
+    textarea {
+      height: 100%;
+      width: 100%;
+      padding: 30px;
+      font-size: 15px;
+      font-weight: 400;
+      outline: none;
+      border: 5px solid #ac078883;
+      border-radius: 0 4px 0 4px;
+      background: #e7edfe;
+      text-decoration: none;
+      text-decoration-line: none;
+      pointer-events: none;
+    }
+  }
+
+  //?? ↓↓ .assignment-code => [.(html && css && js)-container]
+  .html-container,
+  .css-container,
+  .js-container {
+    &::before {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      width: 50px;
+      height: 20px;
+      color: hsl(0, 0%, 100%);
+      letter-spacing: 5px;
+      padding: 2px 20px 0 15px;
+      border-radius: 5px 50px 0 0;
+      background-color: rgba(0, 195, 255, 0.61);
+    }
+  }
+
+  //?? ↓↓ .assignment-code => [.html-container]
+  .html-container {
+    &::before {
+      content: "HTML";
+    }
+  }
+
+  //?? ↓↓ .assignment-code => [.css-container]
+  .css-container {
+    &::before {
+      content: "CSS";
+    }
+  }
+
+  //?? ↓↓ .assignment-code => [.js-container]
+  .js-container {
+    &::before {
+      content: "JavaScript";
+    }
+  }
+  // scrollbar
+  @supports (scrollbar-color: #00000000 #00000000) {
+    * {
+      scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 0%, 0);
+      scrollbar-width: thin;
+    }
+  }
+
+  .code-container textarea::-webkit-scrollbar {
+    display: none;
+  }
+  // scrollbar end
+}
