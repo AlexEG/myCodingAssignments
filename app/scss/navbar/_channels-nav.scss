@@ -121,3 +121,20 @@ nav {
     }
   }
 }
+// testing
+/*
+.active {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 38px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+    transition: height 180ms ease-in-out;
+  }
+}
+*/
