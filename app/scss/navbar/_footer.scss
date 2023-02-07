@@ -1,0 +1,83 @@
+aside {
+  .footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--600);
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        border-radius: 10px;
+        background-color: #3ba55c;
+        border: solid 3px var(--600);
+      }
+
+      img {
+        width: 35px;
+        border-radius: 50%;
+      }
+    }
+
+    &__accounts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: hsl(210, 3%, 87%);
+        padding: 2px;
+        border-radius: 5px;
+
+        &:nth-child(1) {
+          &:hover {
+            color: hsl(0, 5%, 9%);
+            background-color: hsl(0, 0%, 95%);
+          }
+        }
+
+        &:nth-child(2) {
+          border-radius: 50%;
+          padding-block: 5px;
+          &:hover {
+            background-color: hsl(0, 0%, 0%);
+            color: hsl(0, 0%, 97%);
+          }
+        }
+
+        &:nth-child(3) {
+          &:hover {
+            color: hsl(201, 100%, 35%);
+          }
+        }
+
+        &:nth-child(4) {
+          &:hover {
+            background-color: hsl(240, 55%, 9%);
+            color: hsl(0, 0%, 97%);
+          }
+        }
+
+        i {
+          font-size: 1.4rem;
+          margin-inline: 2px;
+        }
+      }
+    }
+  }
+}

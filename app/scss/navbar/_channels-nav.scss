@@ -12,11 +12,11 @@ nav {
     </ul>
   </nav>
   */
-  height: 100vh;
+  height: calc(100vh - 25px);
   width: 72px;
   padding-inline: 12px;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   // background-color: var(--channel-nav-bg);
   background-color: var(--900);
@@ -25,25 +25,11 @@ nav {
     // outline: solid 1px rgb(72, 255, 0); ////
 
     li {
-      // outline: solid 1px blue; ////
-      &:first-child {
-        margin-block: 20px;
-      }
-
       width: 48px;
       height: 48px;
       list-style: none;
       margin-bottom: 10px;
       position: relative;
-
-      img {
-        border-radius: 50%;
-        transition: border-radius 180ms ease-in-out;
-
-        &:hover {
-          border-radius: 30%;
-        }
-      }
 
       // add before + after to a tag (channel name) beside the logo
       // general style for all
