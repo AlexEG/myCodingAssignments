@@ -1,0 +1,103 @@
+nav {
+  //todo HTML architecture //
+  /*
+  <nav>
+    <ul>
+      <li>
+        <a>
+          <img>
+          <div class="channel-name"> <span> </span> </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  */
+
+  ul {
+    li {
+      //? ↓↓ Home Icon
+      // outline: solid 1px blue; ////
+      &:first-child {
+        margin-block: 10px 25px;
+
+        a div {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: hsla(0, 0%, 100%, 0.119);
+          position: relative;
+          transition: border-radius 180ms ease-in-out;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            height: 2px;
+            width: 80%;
+            background-color: hsla(0, 0%, 100%, 0.119);
+          }
+          &:hover {
+            border-radius: 30%;
+            i {
+              color: hsl(0, 0%, 100%);
+            }
+          }
+
+          i {
+            font-size: 1.5rem;
+            color: hsl(214, 4%, 65%);
+            transition: color 180ms ease-in-out;
+          }
+        }
+      }
+
+      img {
+        border-radius: 50%;
+        transition: border-radius 180ms ease-in-out;
+
+        &:hover {
+          border-radius: 30%;
+        }
+
+        //? ↓↓ img [END]
+      }
+    }
+
+    //?? ↓↓ nav => ul => [li](.page-course-open)
+    .page-course-open {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        // height: 38px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        top: 50%;
+        left: -16px;
+        transform: translateY(-50%);
+        transition: height 180ms ease-in-out;
+
+        animation: current 200ms linear 1 normal forwards;
+      }
+
+      // to cancel the resize flash when click & hover on open page icon
+      &:hover {
+        // outline: none; ////
+        &::after {
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+// animation for the white thing to make it feel native app
+@keyframes current {
+  0% {
+    height: 8px;
+  }
+  100% {
+    height: 38px;
+  }
+}

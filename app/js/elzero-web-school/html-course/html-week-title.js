@@ -1,11 +1,15 @@
 // [W = Week]  [T = Title] [C = Content]
-
+// <main>
+const lessonsContent = document.querySelector("#lessonsContent");
+// <h2> HTML
 const htmlCourse = document.querySelector("#htmlCourse");
 
+// <h3> week [1]
 const htmlW1T = document.querySelector("#htmlWeek1");
 const htmlW2T = document.querySelector("#htmlWeek2");
 const htmlW3T = document.querySelector("#htmlWeek3");
 
+// links(lesson) contanier
 const htmlW1C = document.querySelector(".htmlweek1");
 const htmlW2C = document.querySelector(".htmlweek2");
 const htmlW3C = document.querySelector(".htmlweek3");
